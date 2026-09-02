@@ -35,5 +35,14 @@ public class DragonMain {
         // kalau dragon2 bergerak ke arah (direction) yang salah
         dragon2.changeDirection(7);
         dragon2.printStatus();
+
+        // kalau method move() dipanggil langsung setelah objek diinstansiasi
+        Dragon dragon3 = new Dragon();
+        System.out.println("Status awal dragon3:");
+        dragon3.printStatus();
+
+        // dragon3 bergerak 6 steps
+        dragon3.move(6);
+        dragon3.printStatus();
     }
 }
