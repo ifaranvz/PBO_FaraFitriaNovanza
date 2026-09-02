@@ -6,6 +6,9 @@ public class Sepeda {
 
     public void tambahKecepatan(float increment) {
         kecepatan += increment;
+        if (kecepatan > 20) {
+            kecepatan = 20;
+        }
     }
 
     public void kurangiKecepatan(float decrement) {
