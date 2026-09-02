@@ -10,6 +10,9 @@ public class Sepeda {
 
     public void kurangiKecepatan(float decrement) {
         kecepatan -= decrement;
+        if (kecepatan < 0) {
+            kecepatan = 0;
+        }
     }
 
     public void cetakInfo() {
