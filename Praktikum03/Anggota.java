@@ -1,0 +1,45 @@
+package Praktikum03;
+
+public class Anggota {
+    private String nomorKTP;
+    private String nama;
+    private double limitPinjaman;
+    private double jumlahPinjaman;
+
+    public Anggota(String nomorKTP, String nama, double limitPinjaman) {
+        this.nomorKTP = nomorKTP;
+        this.nama = nama;
+        this.limitPinjaman = limitPinjaman;
+        this.jumlahPinjaman = 0;
+    }
+ 
+    public String getNomorKTP() {
+        return nomorKTP;
+    }
+ 
+    public String getNama() {
+        return nama;
+    }
+ 
+    public double getLimitPinjaman() {
+        return limitPinjaman;
+    }
+ 
+    // jumlahPinjaman dibuat read-only makanya tidak ada setter karena nilainya hanya boleh diubah lewat method pinjam() dan angsur()
+    public double getJumlahPinjaman() {
+        return jumlahPinjaman;
+    }
+ 
+    // method untuk meminjam uang
+    public void pinjam(double nominal) {
+        if (jumlahPinjaman + nominal > limitPinjaman) {
+            System.out.println("Maaf, jumlah pinjaman melebihi limit.");
+        } else {
+            jumlahPinjaman += nominal;
+        }
+    }
+
+    public void angsur(double nominal) {
+        jumlahPinjaman -= nominal;
+    }
+}
