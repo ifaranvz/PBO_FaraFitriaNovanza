@@ -39,7 +39,16 @@ public class Anggota {
         }
     }
 
+    // method untuk mengangsur pinjaman
+    // nominal angsuran minimal 10% dari jumlah pinjaman saat ini
     public void angsur(double nominal) {
-        jumlahPinjaman -= nominal;
+        double minimalAngsuran = 0.1 * jumlahPinjaman;
+
+        if (nominal < minimalAngsuran) {
+            System.out.println("Maaf, angsuran harus 10% dari jumlah pinjaman");
+        }
+        else {
+            jumlahPinjaman -= nominal;
+        }
     }
 }
