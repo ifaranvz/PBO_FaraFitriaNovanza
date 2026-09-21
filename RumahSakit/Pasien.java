@@ -1,5 +1,6 @@
 package RumahSakit;
 import java.util.ArrayList;
+import java.time.LocalDate;
 
 public class Pasien {
     private String noRekamMedis;
@@ -35,6 +36,14 @@ public class Pasien {
         info += "\n";
 
         return info;
+    }
+
+    public void tambahKonsultasi (LocalDate tanggal, Pegawai dokter, Pegawai perawat) {
+        Konsultasi konsultasi = new Konsultasi();
+        konsultasi.setTanggal(tanggal);
+        konsultasi.setDokter(dokter);
+        konsultasi.setPerawat(perawat);
+        riwayatKonsultasi.add(konsultasi);
     }
 
 }
