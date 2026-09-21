@@ -1,8 +1,10 @@
 package RumahSakit;
+import java.util.ArrayList;
 
 public class Pasien {
     private String noRekamMedis;
     private String nama;
+    private ArrayList<Konsultasi> riwayatKonsultasi;
 
     public String getNoRekamMedis() {
         return noRekamMedis;
@@ -23,6 +25,7 @@ public class Pasien {
     public Pasien(String noRekamMedis, String nama) {
         this.noRekamMedis = noRekamMedis;
         this.nama = nama;
+        this.riwayatKonsultasi = new ArrayList<Konsultasi>();
     }
 
     public String getInfo() {
