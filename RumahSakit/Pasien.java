@@ -33,6 +33,17 @@ public class Pasien {
         String info = "";
         info += "No Rekam Medis     : " + this.noRekamMedis + "\n";
         info += "Nama               : " + this.nama + "\n";
+
+        if (!riwayatKonsultasi.isEmpty()) {
+            info += "Riwayat Konsultasi :\n";
+
+            for (Konsultasi konsultasi : riwayatKonsultasi) {
+                info += konsultasi.getInfo();
+            }
+        }
+        else {
+            info += "Belum ada riwayat konsultasi";
+        }
         info += "\n";
 
         return info;
