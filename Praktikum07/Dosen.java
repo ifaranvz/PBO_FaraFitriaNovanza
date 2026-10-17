@@ -8,9 +8,9 @@ public class Dosen extends Pegawai {
     // }
 
     public Dosen(String nip, String nama, double gaji, String nidn) {
-    this.nidn = nidn;
-    super(nip, nama, gaji);
-}
+        super(nip, nama, gaji);
+        this.nidn = nidn;
+    }
 
     public String getInfo() {
         return "NIDN       : " + this.nidn + "\n";
