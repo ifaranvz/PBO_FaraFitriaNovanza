@@ -8,8 +8,8 @@ public class Dosen extends Pegawai {
     }
 
     public String getAllInfo() {
-        String info = this.getInfo();
-        info += "NIDN       : " + nidn;
+        String info = super.getInfo();
+        info += "NIDN   : " + nidn;
 
         return info;
     }
