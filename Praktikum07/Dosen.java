@@ -8,6 +8,7 @@ public class Dosen extends Pegawai {
     }
 
     public Dosen(String nip, String nama, double gaji, String nidn) {
+        super();
         super.nip = nip;
         super.nama = nama;
         super.gaji = gaji;
