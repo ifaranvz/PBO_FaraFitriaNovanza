@@ -3,15 +3,12 @@ package Praktikum07;
 public class Dosen extends Pegawai {
     public String nidn;
 
-    public Dosen() {
-        System.out.println("Objek dari class Dosen dibuat");
-    }
+    // public Dosen() {
+    //     System.out.println("Objek dari class Dosen dibuat");
+    // }
 
     public Dosen(String nip, String nama, double gaji, String nidn) {
-        super();
-        super.nip = nip;
-        super.nama = nama;
-        super.gaji = gaji;
+        super(nip, nama, gaji);
         this.nidn = nidn;
     }
 
