@@ -1,10 +1,11 @@
 package UTS;
 
 public class Laptop extends Elektronik {
-    public String prosesor;
+    private String prosesor;
 
     public Laptop() {
-        prosesor = "-";
+        super();
+        this.prosesor = "-";
     }
 
     public Laptop(String nama, String merk, double harga, String prosesor) {
@@ -16,14 +17,15 @@ public class Laptop extends Elektronik {
         return prosesor;
     }
 
-    public void setProsesor(String n) {
-        prosesor = n;
+    public void setProsesor(String prosesor) {
+        this.prosesor = prosesor;
     }
 
     public String getInfo() {
         String info = super.getInfo();
-        info += "Prosesor : " + prosesor + "\n";
+        info += "Prosesor : " + this.prosesor + "\n";
 
         return info;
     }
+
 }

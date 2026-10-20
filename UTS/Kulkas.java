@@ -1,10 +1,11 @@
 package UTS;
 
 public class Kulkas extends Elektronik {
-    public int suhu;
+    private int suhu;
 
     public Kulkas() {
-        suhu = 0;
+        super();
+        this.suhu = 0;
     }
 
     public Kulkas(String nama, String merk, double harga, int suhu) {
@@ -16,14 +17,15 @@ public class Kulkas extends Elektronik {
         return suhu;
     }
 
-    public void setSuhu(int n) {
-        suhu = n;
+    public void setSuhu(int suhu) {
+        this.suhu = suhu;
     }
 
     public String getInfo() {
         String info = super.getInfo();
-        info += "Suhu  : " + suhu + " derajat Celcius\n";
+        info += "Suhu  : " + this.suhu + " derajat Celcius\n";
 
         return info;
     }
+
 }

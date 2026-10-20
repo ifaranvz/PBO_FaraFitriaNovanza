@@ -1,14 +1,14 @@
 package UTS;
 
 public class Elektronik {
-    public String nama;
-    public String merk;
-    public double harga;
+    private String nama;
+    private String merk;
+    private double harga;
 
     public Elektronik() {
-        nama = "-";
-        merk = "-";
-        harga = 0;
+        this.nama = "-";
+        this.merk = "-";
+        this.harga = 0;
     }
 
     public Elektronik(String nama, String merk, double harga) {
@@ -17,20 +17,37 @@ public class Elektronik {
         this.harga = harga;
     }
 
-    public void setNama(String n) {
-        nama = n;
-    }
-
     public String getNama() {
         return nama;
     }
 
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public String getMerk() {
+        return merk;
+    }
+
+    public void setMerk(String merk) {
+        this.merk = merk;
+    }
+
+    public double getHarga() {
+        return harga;
+    }
+
+    public void setHarga(double harga) {
+        this.harga = harga;
+    }
+
     public String getInfo() {
         String info = "";
-        info += "Nama  : " + nama + "\n";
-        info += "Merk  : " + merk + "\n";
-        info += "Harga : " + harga + "\n";
+        info += "Nama  : " + this.nama + "\n";
+        info += "Merk  : " + this.merk + "\n";
+        info += "Harga : " + this.harga + "\n";
 
         return info;
     }
+
 }
