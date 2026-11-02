@@ -21,6 +21,7 @@ public class Kulkas extends Elektronik {
         this.suhu = suhu;
     }
 
+    @Override
     public String getInfo() {
         String info = super.getInfo();
         info += "Suhu  : " + this.suhu + " derajat Celcius\n";
@@ -28,4 +29,15 @@ public class Kulkas extends Elektronik {
         return info;
     }
 
+    @Override
+    public void nyalakan() {
+        System.out.println("Menghubungkan kulkas ke listrik");
+        System.out.println("Kompresor menyala, suhu diatur ke " + this.suhu + " derajat Celcius");
+    }
+
+    @Override
+    public void matikan() {
+        System.out.println("Mencabut kabel dari listrik");
+        System.out.println("Kompresor berhenti, " + getNama() + " mati");
+    }
 }
