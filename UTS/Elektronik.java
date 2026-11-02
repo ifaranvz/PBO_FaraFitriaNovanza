@@ -1,6 +1,6 @@
 package UTS;
 
-public class Elektronik {
+public abstract class Elektronik {
     private String nama;
     private String merk;
     private double harga;
@@ -50,4 +50,6 @@ public class Elektronik {
         return info;
     }
 
+    public abstract void nyalakan();
+    public abstract void matikan();
 }
