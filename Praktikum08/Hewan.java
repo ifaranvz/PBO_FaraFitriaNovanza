@@ -1,6 +1,6 @@
 package Praktikum08;
 
-public class Hewan {
+public abstract class Hewan {
     public double berat;
     public String makanan;
     public String habitat;
