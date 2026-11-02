@@ -21,6 +21,7 @@ public class Laptop extends Elektronik {
         this.prosesor = prosesor;
     }
 
+    @Override
     public String getInfo() {
         String info = super.getInfo();
         info += "Prosesor : " + this.prosesor + "\n";
@@ -28,4 +29,15 @@ public class Laptop extends Elektronik {
         return info;
     }
 
+    @Override
+    public void nyalakan() {
+        System.out.println("Menekan tombol power");
+        System.out.println("Sistem booting, " + getNama() + " menyala");
+    }
+
+    @Override
+    public void matikan() {
+        System.out.println("Menyimpan semua pekerjaan");
+        System.out.println("Shutdown, " + getNama() + " mati");
+    }
 }
