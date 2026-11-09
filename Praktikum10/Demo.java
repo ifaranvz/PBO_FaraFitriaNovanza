@@ -10,6 +10,10 @@ public class Demo {
         System.out.println(pegawai1.nama);
         pegawai1.displayInfo();
 
-        TenagaKependidikan test = (TenagaKependidikan) pegawai1;
+        Dosen newDosen = (Dosen) pegawai1;
+
+        System.out.println(newDosen.nama);
+        System.out.println(newDosen.nidn);
+        newDosen.mengajar();
     }
 }
